@@ -3,6 +3,7 @@ package com.example.maxim.myautocomplete;
 import android.content.Context;
 import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.util.AttributeSet;
+import android.util.Log;
 
 public class CustomAutoCompleteView extends AppCompatAutoCompleteTextView{
 
@@ -21,6 +22,7 @@ public class CustomAutoCompleteView extends AppCompatAutoCompleteTextView{
 
     @Override
     protected void performFiltering(CharSequence text, int keyCode) {
+        Log.d("myTag", "performFiltering " + text);
         String filterText = "";
         super.performFiltering(filterText, keyCode);
     }
